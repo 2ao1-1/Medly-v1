@@ -1,0 +1,17 @@
+# 🐳 استخدام نسخة Node.js رسمية
+FROM node:18
+
+# 🏗️ تحديد مجلد العمل داخل الـ Container
+WORKDIR /app
+
+# 📦 نسخ ملفات المشروع
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . .
+
+# 🔥 تعيين المنفذ
+EXPOSE 5000
+
+# 🚀 تشغيل السيرفر
+CMD ["npm", "run", "dev"]
