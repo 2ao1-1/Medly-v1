@@ -15,4 +15,4 @@ COPY . .
 ENV PORT=5000
 
 # تشغيل التطبيق
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
