@@ -11,6 +11,7 @@ services:
       JWT_SECRET: "mysupersecretkey12345"
     depends_on:
       - db
+    entrypoint: ["/bin/sh", "-c", "npx prisma generate && node server.js"]
 
   db:
     image: postgres:15
