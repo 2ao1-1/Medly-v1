@@ -4,7 +4,11 @@
   "description": "",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "prisma:init": "npx prisma init",
+    "prisma:migrate": "npx prisma migrate dev --name init",
+    "prisma:generate": "npx prisma generate",
+    "prisma:studio": "npx prisma studio"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +32,8 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "twilio": "^5.4.4"
+  },
+  "devDependencies": {
+    "prisma": "^6.3.1"
   }
 }
